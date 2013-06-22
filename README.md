@@ -78,7 +78,7 @@ following command:
 
 This package run in two mode: <br/>
 
-* gui [default mode]
+* gui [default mode]<br/>
 In this mode you can add semantic tags by hand. For each word in treebank, 
 you can search in FarsNet and show list of synsets and you must
 determine which of them is correct. Simply double click on jar file or 
@@ -86,34 +86,37 @@ run the following command:
 
 > java -jar SemanticTagger.jar
 
-* command-line
+* command-line<br/>
 In this mode you can set input file to automatically set semantic tags.
 In order to running package in command-line mode you must be set -v flag 
 (visible) to 0:
 
-> java -jar SemanticTagger.jar -v 0 -i <input-file> -o <output-file> \
-  -t <type-of-semantic-tag (SS|SF)>
+> java -jar SemanticTagger.jar -v 0 -i &lt;input-file&gt; -o &lt;output-file&gt; -t &lt;type-of-semantic-tag (SS|SF)&gt;
 
--i <input conll file>
-	intput CoNLL file that want to add word cluster id to FEATS column.
+<table>
+<tr><td>-i &lt;input conll file&gt;</td><td>intput CoNLL file that want to add semantic tag to FEATS column.</td></tr>
+<tr><td>-o &lt;output conll file&gt;</td><td>name of output CoNLL file after adding feature</td></tr>
+<tr>
+	<td>-t &lt;type-of-semantic-tag (SS|SF)&gt;</td>
+	<td>
+		Type of semantic tag that want to add to FEATS column.<br/>
+		<ul>
+			<code>SS</code>: Synset id from FarsNet<br/>
+			<code>SF</code>: Semantic file from WordNet
+		</ul>
+	</td>
+</tr>
+</table>
 
--o <output conll file>
-	name of output CoNLL file after adding feature
-
--t <type-of-semantic-tag (SS|SF)>
-	Type of semantic tag that want to add to FEATS column.
-		SS -> Synset id from FarsNet
-		SF -> Semantic file from WordNet
-		
 For example:
 
 > java -jar SemanticTagger.jar -v 0 -i input.conll -o output.conll -t SF
 
 Requirements:
-** "FarsNetBrowser.jar" (http://nlp.sbu.ac.ir/site/farsnet/).
+* "[FarsNetBrowser.jar] (http://nlp.sbu.ac.ir/site/farsnet/)".
 
 4. References
 ------------
 [1]	M. Shamsfard, et al., "Semi Automatic Development Of FarsNet: The 
-Persian Wordnet," in Proceedings of 5th Global WordNet Conference (GWA2010), 
+Persian Wordnet", in Proceedings of 5th Global WordNet Conference (GWA2010), 
 Mumbai, India, 2010.
