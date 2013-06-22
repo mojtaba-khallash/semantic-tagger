@@ -98,7 +98,7 @@ In order to running package in command-line mode you must be set -v flag
   -t <type-of-semantic-tag (SS|SF)>
 
 -i <input conll file>
-	intput CoNLL file that want to add word cluster id to FEATS column.
+	intput CoNLL file that want to add semantic tag to FEATS column.
 
 -o <output conll file>
 	name of output CoNLL file after adding feature
@@ -119,5 +119,5 @@ Requirements:
 References
 ------------
 [1]	M. Shamsfard, et al., "Semi Automatic Development Of FarsNet: The 
-    Persian Wordnet," in Proceedings of 5th Global WordNet Conference (GWA2010), 
+    Persian Wordnet", in Proceedings of 5th Global WordNet Conference (GWA2010), 
     Mumbai, India, 2010.
