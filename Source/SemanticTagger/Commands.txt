@@ -1,0 +1,5 @@
+>> Add Synset ID
+java -jar SemanticTagger.jar -v 0 -i input.conll -o output_synsetID.conll -t SS
+
+>> Add Semantic File
+java -jar SemanticTagger.jar -v 0 -i input.conll -o output_semanticFile.conll -t SF
